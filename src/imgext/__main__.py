@@ -2,7 +2,7 @@
 
 import os
 
-from tkinter.filedialog import askopenfilename
+# from tkinter.filedialog import askopenfilename
 from .imgext import extract_img
 
 
@@ -19,9 +19,11 @@ def main() -> int:
     """ Main function. """
     file_path = ''
     if len(os.sys.argv) < 2:
-        file_path = askopenfilename(
-            filetypes=FILE_TYPE_ALLOWED
-        )
+        # file_path = askopenfilename(
+        #    filetypes=FILE_TYPE_ALLOWED
+        # )
+        os.sys.stderr.write("\033[91mNo document file specified.\033[0m")
+        return 1
     else:
         file_path = os.sys.argv[1]
 
