@@ -3,7 +3,7 @@
 import os
 
 from tkinter.filedialog import askopenfilename
-from imgext import extract_img
+from .imgext import extract_img
 
 
 FILE_TYPE_ALLOWED = (
